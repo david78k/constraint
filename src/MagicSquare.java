@@ -7,7 +7,9 @@ import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 
 public class MagicSquare {
-
+	
+	static final int n = 4;
+	
 	public static void main(String[] args) {
 		MagicSquare ms = new MagicSquare();
 		ms.solve();
@@ -15,8 +17,11 @@ public class MagicSquare {
 	
 	void solve() {
 		//constants of the problem:
-		int n = 3;
+//		int n = 3;
 		int M = n * (n * n + 1) / 2;
+		
+		System.out.println("(n, M) = (" + n + ", " + M + ")");
+		
 		// Our model
 		Model m = new CPModel();
 		IntegerVariable[][] cells = new IntegerVariable[n][n];

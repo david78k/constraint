@@ -1,6 +1,18 @@
+import choco.Choco;
+import choco.cp.model.CPModel;
+import choco.cp.solver.CPSolver;
+import choco.kernel.model.Model;
+import choco.kernel.model.constraints.Constraint;
+import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.solver.Solver;
 
 public class MagicSquare {
 
+	public static void main(String[] args) {
+		MagicSquare ms = new MagicSquare();
+		ms.solve();
+	}
+	
 	void solve() {
 		//constants of the problem:
 		int n = 3;
